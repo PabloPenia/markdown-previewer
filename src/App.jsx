@@ -1,14 +1,13 @@
 import { useState } from 'react'
+import cheatsheet from './cheatsheet'
 import Editor from './components/Editor'
 import Preview from './components/Preview'
-const defaultContent = `# Heading 1
-## Heading 2
-### Heading 3`
-function App() {
-  const [input, setInput] = useState(defaultContent)
 
-  const handleInput = e => {
-    setInput(e.target.value)
+function App() {
+  const [content, setContent] = useState(cheatsheet)
+
+  const handleChange = e => {
+    setContent(e.target.value)
   }
   return (
     <main>
@@ -16,8 +15,11 @@ function App() {
         <h1>Markdown Previewer</h1>
       </header>
       <section>
-        <Editor content={input} handleInput={handleInput} />
-        <Preview content={input} />
+        <Editor
+          content={content}
+          handleInput={handleChange}
+        />
+        <Preview content={content} />
       </section>
       <footer>
         <p>
