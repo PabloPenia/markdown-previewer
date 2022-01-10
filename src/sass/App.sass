@@ -1,0 +1,36 @@
+@mixin hover
+  @media (hover: hover) and (pointer: fine)
+    &:hover, &:focus
+      @content
+@mixin no-hover
+  @media (hover: none)
+    &:active, &:focus
+      @content
+@mixin breakpoint($width)
+  @media (min-width: $width)
+    @content
+%flex
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 1em
+  width: 100%
+// reset
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  height: 100%
+*, *:before, *:after
+  box-sizing: inherit
+body,
+blockquote,
+figure,
+h1,
+p
+  margin: 0
+body
+  background-color: #f8f8ff
+  font-family: 'Roboto Slab', serif
+  font-size: 1.6rem
+  @include breakpoint(768px)
+    font-size: 2rem
