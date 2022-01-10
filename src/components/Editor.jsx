@@ -3,7 +3,7 @@ const Editor = ({ content, handleInput }) => {
     <div className="panel">
       <header>
         <h2>Editor</h2>
-        <div className="icons">icons</div>
+        {/* <div className="icons">icons</div> */}
       </header>
 
       <textarea

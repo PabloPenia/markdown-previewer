@@ -13,7 +13,7 @@ const Preview = ({ content, handleMd }) => {
     <div className="panel">
       <header>
         <h2>Preview</h2>
-        <div className="icons">icons</div>
+        {/* <div className="icons">icons</div> */}
       </header>
       <article
         id="preview"

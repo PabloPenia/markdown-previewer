@@ -1,3 +1,11 @@
+:root {
+  --header-bg: #003356;
+  --main-bg: #EBF7FF;
+  --panel-bg: #ADDEFF;
+  --primary-color: #002137;
+  --secondary-color: #ADDEFF;
+}
+
 .panel header, .panel, footer, section, main {
   display: flex;
   flex-direction: column;
@@ -18,33 +26,15 @@ html {
   box-sizing: inherit;
 }
 
-body,
-blockquote,
-figure,
-h1,
-p {
-  margin: 0;
-}
-
 body {
-  color: #ADDEFF;
+  margin: 0;
+  color: var(--primary-color);
   font-family: "Roboto Slab", serif;
   font-size: 1.6rem;
 }
 @media (min-width: 768px) {
   body {
     font-size: 2rem;
-  }
-}
-
-a {
-  color: #EBF7FF;
-  text-decoration: none;
-}
-@media (hover: hover) and (pointer: fine) {
-  a:hover, a:focus {
-    color: #ADDEFF;
-    text-decoration: underline;
   }
 }
 
@@ -58,34 +48,66 @@ main {
 
 section {
   padding: 1em 2%;
-  gap: 2em;
-  flex-direction: row;
+  gap: 1em;
   flex: 1;
-  background: #001A2C;
+  background: var(--main-bg);
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  section {
+    gap: 2em;
+    flex-direction: row;
+  }
 }
 
 #master-header, footer {
-  background-color: #001523;
+  background-color: var(--header-bg);
+  color: var(--secondary-color);
 }
 
 footer {
   padding: 1em 2%;
+}
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  opacity: 0.6;
+  padding-bottom: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  footer a:hover, footer a:focus {
+    opacity: 1;
+    border-bottom: 1px solid currentColor;
+  }
+}
+footer p {
+  margin: 0;
 }
 
 #master-header {
   text-align: center;
   padding: 1em;
 }
+#master-header h1 {
+  margin: 0;
+}
 
 .panel {
   flex: 1;
-  max-width: 46%;
-  margin: 0 auto;
+  min-width: 55rem;
+  margin: 1em auto;
 }
+.panel header {
+  padding: 0.5em;
+  background-color: var(--header-bg);
+  border-radius: 8px 8px 0 0;
+  color: var(--secondary-color);
+}
+.panel header h2 {
+  margin: 0;
+}
+
 textarea {
-  background: #002137;
-  color: #ADDEFF;
   white-space: pre-wrap;
   resize: none;
 }
@@ -93,13 +115,9 @@ textarea {
 #editor, #preview {
   padding: 1em;
   flex: 1;
-  border: 1px solid #001523;
+  background: var(--panel-bg);
+  border: 1px solid var(--header-bg);
   overflow: auto;
-}
-
-#preview {
-  background: #003356;
-  color: #EBF7FF;
 }
 
 /*# sourceMappingURL=style.css.map */
