@@ -1,8 +1,16 @@
-const Editor = () => {
+const Editor = ({ content, handleInput }) => {
   return (
-    <div>
-      <h2>Editor</h2>
-      <textarea id="editor"></textarea>
+    <div className="panel">
+      <header>
+        <h2>Editor</h2>
+        <div className="icons">icons</div>
+      </header>
+
+      <textarea
+        id="editor"
+        value={content}
+        onChange={handleInput}
+      ></textarea>
     </div>
   )
 }

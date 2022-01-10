@@ -1,8 +1,11 @@
-const Preview = () => {
+const Preview = ({ content }) => {
   return (
-    <div>
-      <h2>Preview</h2>
-      <article id="preview"></article>
+    <div className="panel">
+      <header>
+        <h2>Preview</h2>
+        <div className="icons">icons</div>
+      </header>
+      <article id="preview">{content}</article>
     </div>
   )
 }

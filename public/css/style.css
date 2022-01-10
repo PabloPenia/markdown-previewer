@@ -1,0 +1,100 @@
+.panel header, .panel, footer, section, main {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel header, footer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body,
+blockquote,
+figure,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  color: #ADDEFF;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 2rem;
+  }
+}
+
+a {
+  color: #EBF7FF;
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  a:hover, a:focus {
+    color: #ADDEFF;
+    text-decoration: underline;
+  }
+}
+
+main {
+  height: 100vh;
+}
+
+section {
+  padding: 1em 2%;
+  gap: 2em;
+  flex-direction: row;
+  flex: 1;
+  background: #001A2C;
+}
+
+textarea {
+  background: #002137;
+  color: #ADDEFF;
+  white-space: pre-wrap;
+  resize: none;
+}
+
+#master-header, footer {
+  background-color: #001523;
+}
+
+footer {
+  padding: 1em 2%;
+}
+
+#master-header {
+  text-align: center;
+  padding: 1em;
+}
+
+#editor, #preview {
+  padding: 1em;
+  flex: 1;
+  overflow: auto;
+  border: 1px solid #001523;
+}
+
+#preview {
+  background: #003356;
+  color: #EBF7FF;
+}
+
+.panel {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

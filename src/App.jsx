@@ -1,18 +1,23 @@
+import { useState } from 'react'
 import Editor from './components/Editor'
 import Preview from './components/Preview'
+const defaultContent = `# Heading 1
+## Heading 2
+### Heading 3`
 function App() {
+  const [input, setInput] = useState(defaultContent)
+
+  const handleInput = e => {
+    setInput(e.target.value)
+  }
   return (
     <main>
-      <header>
+      <header id="master-header">
         <h1>Markdown Previewer</h1>
       </header>
       <section>
-        <div className="window">
-          <Editor />
-        </div>
-        <div className="window">
-          <Preview />
-        </div>
+        <Editor content={input} handleInput={handleInput} />
+        <Preview content={input} />
       </section>
       <footer>
         <p>

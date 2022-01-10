@@ -1,3 +1,9 @@
+$darkest: #001523
+$darker: #001A2C
+$dark: #002137
+$darkLight: #003356
+$light: #ADDEFF
+$lighter: #EBF7FF
 @mixin hover
   @media (hover: hover) and (pointer: fine)
     &:hover, &:focus
@@ -11,10 +17,11 @@
     @content
 %flex
   display: flex
-  align-items: center
+  flex-direction: column
+%flex-row
+  flex-direction: row
   justify-content: space-between
-  gap: 1em
-  width: 100%
+  align-items: center
 // reset
 html
   box-sizing: border-box
@@ -29,8 +36,52 @@ h1,
 p
   margin: 0
 body
-  background-color: #f8f8ff
+  color: $light
   font-family: 'Roboto Slab', serif
   font-size: 1.6rem
   @include breakpoint(768px)
     font-size: 2rem
+a
+  color: $lighter
+  text-decoration: none
+  @include hover
+    color: $light
+    text-decoration: underline
+main
+  @extend %flex
+  height: 100vh
+section
+  padding: 1em 2%
+  @extend %flex
+  gap: 2em
+  flex-direction: row
+  flex: 1
+  background: $darker
+textarea
+  background: $dark
+  color: $light
+  white-space: pre-wrap
+  resize: none
+#master-header, footer
+  background-color: $darkest
+footer
+  @extend %flex
+  @extend %flex-row
+  padding: 1em 2%
+#master-header
+  text-align: center
+  padding: 1em
+#editor, #preview
+  padding: 1em
+  flex: 1
+  overflow: auto
+  border: 1px solid $darkest
+#preview
+  background: $darkLight
+  color: $lighter
+.panel
+  @extend %flex
+  flex: 1
+  header
+    @extend %flex
+    @extend %flex-row
