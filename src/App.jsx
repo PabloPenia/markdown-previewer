@@ -29,7 +29,7 @@ function App() {
           </a>
         </p>
         <p>
-          <a href="https://pablopenia.github.io/markdown-previewer">
+          <a href="https://github.com/PabloPenia//markdown-previewer">
             Source Code
           </a>
         </p>
