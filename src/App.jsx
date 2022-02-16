@@ -1,3 +1,4 @@
+import './sass/App.sass'
 import { useState } from 'react'
 import cheatsheet from './cheatsheet'
 import Editor from './components/Editor'
@@ -13,27 +14,18 @@ function App() {
     <main>
       <header id="master-header">
         <h1>Markdown Previewer</h1>
+        <p>
+          Get the
+          <a href="https://github.com/PabloPenia//markdown-previewer">Source Code</a>
+        </p>
+        <p>
+          | &copy; 2022 <a href="https://linkedin.com/in/PabloPenia">Pablo Peña</a>
+        </p>
       </header>
       <section>
-        <Editor
-          content={content}
-          handleInput={handleChange}
-        />
+        <Editor content={content} handleInput={handleChange} />
         <Preview content={content} />
       </section>
-      <footer>
-        <p>
-          &copy; 2022 |{' '}
-          <a href="https://linkedin.com/in/PabloPenia">
-            Pablo Peña
-          </a>
-        </p>
-        <p>
-          <a href="https://github.com/PabloPenia//markdown-previewer">
-            Source Code
-          </a>
-        </p>
-      </footer>
     </main>
   )
 }
