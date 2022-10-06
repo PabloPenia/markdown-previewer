@@ -2,12 +2,15 @@
 	"name": "markdown-previewer",
 	"homepage": "https://pablopenia.github.io/markdown-previewer",
 	"version": "1.0.0",
+	"license": "GPL-3.0-or-later",
 	"dependencies": {
 		"dompurify": "^2.3.4",
 		"highlight.js": "^11.4.0",
 		"marked": "^4.0.9",
 		"react": "^18",
-		"react-dom": "^18"
+		"react-dom": "^18",
+		"react-icons": "^4.4.0",
+		"react-router-dom": "^6.4.1"
 	},
 	"scripts": {
 		"dev": "vite",

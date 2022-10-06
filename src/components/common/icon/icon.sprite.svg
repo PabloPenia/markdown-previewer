@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="icon__ui-no-split" viewBox="0 0 32 32" xml:space="preserve">
+      <path
+        d="M30 0H2a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm1 29.125A1.874 1.874 0 0 1 29.125 31H2.875A1.874 1.874 0 0 1 1 29.125V2.875C1 1.839 1.839 1 2.875 1h26.25C30.161 1 31 1.839 31 2.875v26.25z" />
+    </symbol>
+    <symbol id="icon__ui-split-h" viewBox="0 0 32 32" xml:space="preserve">
+      <path
+        d="M32 2a2 2 0 0 0-2-2H19a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2zm-1 27a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v26z" />
+      <path
+        d="m15 2a2 2 0 0 0-2-2h-11a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2zm-1 27a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2v-26a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2z" />
+    </symbol>
+    <symbol id="icon__ui-split-v" viewBox="0 0 32 32" xml:space="preserve">
+      <path
+        d="M32 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V2zm-1 10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v9z" />
+      <path
+        d="m32 19a2 2 0 0 0-2-2h-28a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2zm-1 10a2 2 0 0 1-2 2h-26a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2z" />
+    </symbol>
+  </defs>
+</svg>

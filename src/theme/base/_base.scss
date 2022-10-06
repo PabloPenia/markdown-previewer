@@ -1,0 +1,127 @@
+@use '../abstracts/mixin';
+@use '../abstracts/extends';
+html {
+	height: 100%;
+}
+body {
+	min-height: 100vh;
+	font: {
+		family: var(--font__base);
+		size: var(--font__base);
+	}
+}
+a {
+	color: var(--color__txt);
+	border-bottom: 1px solid var(--color__txt);
+	text-decoration: none;
+	@include mixin.hover {
+		transform: scale(1.1);
+	}
+}
+button {
+	padding: 0.4em 0.8em;
+	border: 1px solid currentColor;
+	border-radius: var(--b-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.2em;
+
+	font: {
+		weight: bold;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: var(--color__txt);
+		color: var(--color__bg);
+	}
+
+	.icon svg {
+		fill: currentColor;
+	}
+}
+/*******************************************
+*              LAYOUT
+*******************************************/
+main {
+	width: 100%;
+	height: 100;
+	> header {
+		justify-content: space-between;
+		padding: 0.2em var(--sp__sides);
+		background-color: var(--color__bg--alt);
+		color: var(--color__txt--alt);
+		> .brand {
+			@extend %flex;
+			width: fit-content;
+			p {
+				font-size: var(--font__base--small);
+			}
+		}
+		nav {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			a:last-of-type {
+				@extend %flex;
+				padding: 0.4em 0.8em;
+				background-color: var(--color__txt--alt);
+				border-radius: 0.6rem;
+				color: var(--color__bg--alt);
+				&.active {
+					background-color: #aaa;
+				}
+			}
+		}
+	}
+}
+.github {
+	position: absolute;
+	top: 0;
+	right: 0;
+	span {
+		width: 8rem;
+		padding-top: 8rem;
+	}
+}
+.github {
+	position: absolute;
+	top: 0;
+	border: 0;
+	right: 0;
+	text-decoration: none;
+	.github-corner:hover .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
+	.octo-arm {
+		transform-origin: 130px 106px;
+	}
+	@keyframes octocat-wave {
+		0%,
+		100% {
+			transform: rotate(0);
+		}
+
+		20%,
+		60% {
+			transform: rotate(-25deg);
+		}
+
+		40%,
+		80% {
+			transform: rotate(10deg);
+		}
+	}
+
+	@media (max-width: 500px) {
+		.github-corner:hover .octo-arm {
+			animation: none;
+		}
+
+		.github-corner .octo-arm {
+			animation: octocat-wave 560ms ease-in-out;
+		}
+	}
+}

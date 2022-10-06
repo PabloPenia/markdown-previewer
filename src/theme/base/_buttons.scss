@@ -1,0 +1,9 @@
+button {
+	padding: 0.3em 0.6em;
+	border: 1px solid currentColor;
+	border-radius: var(--b-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.2em;
+}

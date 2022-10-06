@@ -1,0 +1,7 @@
+@use '../abstracts/extends';
+.flex {
+	@extend %flex;
+}
+.sr-only {
+	@extend %sr-only;
+}

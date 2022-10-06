@@ -1,33 +1,21 @@
-import './sass/App.sass'
-import { ChangeEvent, useState } from 'react'
-import cheatsheet from './cheatsheet'
-import Editor from './components/Editor'
-import Preview from './components/Preview'
+import './theme/App.scss'
+import Document from './routes/Document/document.route'
+import Navigation from './routes/Navigation/navigation.route'
+import Home from './routes/Home/home.route'
+import { Outlet, Route, Routes } from 'react-router-dom'
 
 function App() {
-	const [content, setContent] = useState<string>(cheatsheet)
-
-	const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) =>
-		setContent(e.target.value)
 	return (
 		<main>
-			<header id='master-header'>
-				<h1>Markdown Previewer</h1>
-				<p>
-					Get the
-					<a href='https://github.com/PabloPenia//markdown-previewer'>
-						Source Code
-					</a>
-				</p>
-				<p>
-					| &copy; 2022{' '}
-					<a href='https://linkedin.com/in/PabloPenia'>Pablo Peña</a>
-				</p>
-			</header>
-			<section>
-				<Editor content={content} handleInput={handleChange} />
-				<Preview content={content} />
-			</section>
+			<Navigation />
+			<Routes>
+				<Route path='/'>
+					<Route index element={<Home />} />
+					<Route path='/doc/*' element={<Document />} />
+					<Route path='*' element={<h1>Not Found</h1>} />
+				</Route>
+			</Routes>
+			<Outlet />
 		</main>
 	)
 }

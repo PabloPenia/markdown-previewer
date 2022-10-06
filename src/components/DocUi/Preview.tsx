@@ -1,6 +1,7 @@
 import { marked } from 'marked'
 import hljs from 'highlight.js'
 import DOMPurify from 'dompurify'
+import { AiOutlineEye } from 'react-icons/ai'
 
 marked.setOptions({
 	renderer: new marked.Renderer(),
@@ -21,8 +22,10 @@ const Preview = ({ content }: { content: string }) => {
 	return (
 		<div className='panel'>
 			<header>
-				<h2>Preview</h2>
-				{/* <div className="icons">icons</div> */}
+				<div className='flex label'>
+					<AiOutlineEye />
+					<h3>Preview</h3>
+				</div>
 			</header>
 			<article
 				id='preview'

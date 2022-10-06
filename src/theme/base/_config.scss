@@ -1,0 +1,20 @@
+@use '../abstracts/mixin';
+:root {
+	--font__base: 'Noticia Text', serif;
+	--font__headings: 'Playfair Display', serif;
+	--font__base: 2rem;
+	--font__base--small: 1.6rem;
+	--sp__sides: 4%;
+	--color__bg--alt: #222;
+	--color__txt--alt: #ddd;
+	// --b-radius: 0.4rem;
+	// --color__hue: 100;
+	// --color__sat: 50%;
+	// --color__lum: 50%;
+	// --color__bg: hsl(var(--color__hue), var(--color__sat), var(--color__lum));
+	// --color__fg: hsl(var(--color__hue), var(--color__sat), 70%);
+	// --color__txt: hsl(var(--color__hue), var(--color__sat), 10%);
+	@include mixin.mediaQuery($from: 'tablet') {
+		--font__base: 2.4rem;
+	}
+}
